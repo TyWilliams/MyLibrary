@@ -1,0 +1,39 @@
+import java.util.*; 
+/**
+ * This program will count vowels & consonants for whatever word you type in using a for loop
+ * @author stephanie
+ *
+ */
+
+public class CounterChar {
+
+	     public static void CountChar (String input)
+		 {
+		 int vCounter=0; 
+	          int cCounter=0;
+	       
+	          for (int i=0;i<input.length();i++)
+	          {
+	           if (input.charAt(i)=='i' || input.charAt(i)=='o' || input.charAt(i)=='u'|| input.charAt(i)=='e'
+	            || input.charAt(i)=='a')
+	           vCounter++;
+	           else
+	           cCounter++;
+	              
+	          }
+	       System.out.println("vowels: "+vCounter +"\nconsonants: " + cCounter);
+		 
+		 }
+		 
+	     public static void main(String []args)
+	     {
+	         String input;
+	         Scanner scan1 = new Scanner(System.in);
+	         System.out.println("Enter a word:");
+	         input = scan1.next(); 
+	          
+	         CountChar(input);
+	          
+	     }
+     
+	}
