@@ -1,0 +1,29 @@
+import java.util.*;
+/**
+ * This program will multiply any number to itself and continue to multiply the result to itself using a loop
+ * @author StephanieTyWilliams
+ *
+ */
+public class Loops {
+
+	public static void main(String[] args) {
+		int x, y;
+		
+		Scanner scan1 = new Scanner (System.in);
+		System.out.println("Please input 1 number for an x value");
+		x = scan1.nextInt();
+		
+		System.out.println("Please input 1 number for an y value");
+		y = scan1.nextInt();
+		
+		//System.out.println(Math.pow(x, y));
+		int result =1;
+		for (int i=1; i<=y; i++)
+		{
+			result =result*x;
+			System.out.println(result);
+		}
+		
+	}
+
+}
