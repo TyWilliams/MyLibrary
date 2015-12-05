@@ -1,0 +1,31 @@
+import java.util.Scanner;
+/**
+ * This program gives you the value of any two numbers squared.
+ * @author stephanie
+ *
+ */
+public class MethodEx {
+		public static int power (int x, int y){
+			int result=1;
+			for(int i=1;i<=y;i++)
+			result=result*x;
+			
+			return result;
+
+		}
+
+	    public static void main(String[] args) {
+
+	        System.out.println("Enter two numbers");
+	        
+	        Scanner scan1 = new Scanner (System.in);
+	        
+	        int number = scan1.nextInt();
+	        int power = scan1.nextInt();
+	        
+	        double result = power(number, power);
+	        
+	        System.out.println(result);
+	    }
+	        
+}
