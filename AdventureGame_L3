@@ -1,0 +1,67 @@
+import java.util.*;
+/**
+ * This is a story base application for a game program that prompts the user for 2 options
+ * @author StephanieTyWilliams
+ *
+ */
+public class Day3 {
+//This was not easy I had help!! very long had to run a thousand and 1 choices
+	public static void main(String[] args) {
+		//Set up the scanner
+		System.out.println("Welcome! What is your name?(enter your name):");
+		Scanner scan1 = new Scanner(System.in);
+		String myName = scan1.nextLine();
+		//create IF statement for yes
+		System.out.println("Would you like to play the game? " + myName);
+		String answer = scan1.nextLine();
+			if (answer.equals("Yes") == true)
+				System.out.println("EXCELLENT!");	
+		{
+			//Print out the options and set up string of choices	
+			System.out.println("You are walking across a field and you encounter a fire-breathing dragon!");
+			System.out.println("What would you do? " + "Fight or Run?");
+			String choice = scan1.nextLine();
+
+			if (choice.equals("Fight") == true)
+			{
+				
+				System.out.println("You Approach the Dragon. " + "You see he has __ Heads");
+				System.out.println("Enter: " + "1 or " + "2 or " + "3");
+				String choice2 = scan1.nextLine();
+				
+				if (choice2.equals("1") == true)
+				{
+					System.out.println("Everyone Fights One head Dragons " + "Choose your weapon!");
+				}
+				//set up if else to try all conditions until true
+				else if (choice2.equals("2") == true)					
+					System.out.println("Two Headed Dragons are rare. " + "Choose your weapon!");
+
+				else if (choice2.equals("3") == true)
+				{
+					//storyline
+					System.out.println("No one has ever faced a Three Headed Dragon before! " + "Choose your weapon!");
+					System.out.println("Armed with your bow and arrow, you approach the Dragon. ");					
+					System.out.println("You can feel it's fiery breath as you get closer. ");					
+					System.out.println("It stares at you with it's __ eyes. " + "Choose " + "Red or " + "Blue.");
+					
+					String eyes = scan1.nextLine();
+					//set up if and if else for eye colors
+					if (eyes.equals("Red") == true)
+					{
+						System.out.println("Oh thank goodness! Red eyed Dragons are friendly");						
+						System.out.println("You pet it and become friends. ");						
+						System.out.println("You name the Dragon. " + "Enter your Dragon's name?");
+						
+						String dragonName = scan1.nextLine();						
+						System.out.println(myName + " and " + dragonName + " Live together forever.");
+						
+					}
+					else if (eyes.equals("Blue") == true)						
+						System.out.println("The Blue eyed Dragon eats you. " + "Your End!");												
+				}									
+			}	
+		}					
+		System.out.println("Good Bye");
+	}								
+}		
